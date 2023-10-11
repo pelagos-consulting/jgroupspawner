@@ -8,7 +8,7 @@ Assuming that your system can get group and user information from LDAP/AD then e
 
 ## In Jupyterhub config file
 
-Set this parameter in your jupyterhub config file:
+Set this parameter in your jupyterhub config file to use this spawner:
 
 `c.JupyterHub.spawner_class = 'jladgroupspawner.JLADGroupSpawner'`
 
