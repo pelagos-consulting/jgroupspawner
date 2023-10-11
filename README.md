@@ -1,5 +1,6 @@
 # jladgroupspawner
-Enable LDAP/AD groups (and any local groups) to be added to jupyterhub-singleuser spawner process.
+
+Assuming that your system can get group and user information from LDAP/AD then enable these groups (and any desired extra groups) to be added to the jupyterhub-singleuser spawner process.
 
 ## Installation
 
