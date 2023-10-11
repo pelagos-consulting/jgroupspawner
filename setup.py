@@ -2,13 +2,12 @@ from setuptools import setup, find_packages
 
 VERSION = '0.0.1' 
 DESCRIPTION = 'JLAD Group Spawner'
-LONG_DESCRIPTION = ('Jupyterher spawner with support to get groups from LDAP and Active Directory
-        as well as support for adding in extra_groups.')
+LONG_DESCRIPTION = ('Jupyterhub spawner with support to get groups from LDAP and Active Directory '
+        'as well as support for adding in extra_groups.')
 
 # Setting up
-setup(
-       # the name must match the folder name 'verysimplemodule'
-        name="jladgroupspawner", 
+setup_args =dict(
+	name="jladgroupspawner", 
         version=VERSION,
         author="Toby Potter",
         author_email="tobympotter@gmail.com",
@@ -37,5 +36,5 @@ setup(
 def main():
     setup(**setup_args)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     main()
