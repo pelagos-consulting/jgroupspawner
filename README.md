@@ -12,6 +12,12 @@ Set this parameter in your jupyterhub config file to use this spawner:
 
 `c.JupyterHub.spawner_class = 'jladgroupspawner.JLADGroupSpawner'`
 
-Then, if you would like to add additional groups (such as for GPU access etc), then add this line to the Jupyterhub config file:
+Then, if you would like to add additional groups (such as local groups for GPU access etc), then add these lines to the Jupyterhub config file:
 
-`c.JLADGroupSpawner.extra_groups=["groupA", "groupB"]`
+```python
+def hook_fun(spawner):
+    spawner.extra_groups=["video", "render"]
+  
+c.Spawner.pre_spawn_hook = hook_fun
+```
+
