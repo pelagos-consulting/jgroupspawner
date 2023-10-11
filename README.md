@@ -1,6 +1,8 @@
 # jladgroupspawner
 
-Assuming that your system can get group and user information from LDAP/AD then enable these groups (and any desired extra groups) to be added to the jupyterhub-singleuser spawner process.
+The default spawner in Jupyterhub doesn't seem to pick up groups that are not local, (i.e defined on a LDAP or AD server). So when a jupyterhub-singleuser notebook server instance is launched then it doesn't pick up all the groups that a user is part of. Furthermore, for LDAP/AD users it is sometimes desired behaviour to add local groups to the groups list for the purpose of accessing resources like GPU's etc.
+
+This spawner uses the `os.getgrouplist` method to get available groups and sets them for the process that is running a singleuser notbook. You also have the option of defining a `pre_spawn_hook` function that sets any number of local extra groups that you would like to give the user access to.
 
 ## Installation
 
