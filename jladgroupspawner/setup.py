@@ -27,11 +27,11 @@ setup(
             "Intended Audience :: Education",
             "Programming Language :: Python :: 3",
         ]
-        entry_points={
-            'jupyterhub.spawners' : [
-                'jladgs=jladgroupspawner:JLADGroupSpawner'
-            ]
-        }
+        #entry_points={
+        #    'jupyterhub.spawners' : [
+        #        'jladgs=jladgroupspawner:JLADGroupSpawner'
+        #    ]
+        #}
 )
 
 def main():
