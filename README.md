@@ -16,6 +16,7 @@ Then, if you would like to add additional groups (such as local groups for GPU a
 
 ```python
 def pre_spawn_hook_fun(spawner):
+    # Whatever groups you like to add
     spawner.extra_groups=["video", "render"]
   
 c.Spawner.pre_spawn_hook = pre_spawn_hook_fun
