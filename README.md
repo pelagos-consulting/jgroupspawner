@@ -15,9 +15,9 @@ Set this parameter in your jupyterhub config file to use this spawner:
 Then, if you would like to add additional groups (such as local groups for GPU access etc), then add these lines to the Jupyterhub config file:
 
 ```python
-def hook_fun(spawner):
+def pre_spawn_hook_fun(spawner):
     spawner.extra_groups=["video", "render"]
   
-c.Spawner.pre_spawn_hook = hook_fun
+c.Spawner.pre_spawn_hook = pre_spawn_hook_fun
 ```
 
